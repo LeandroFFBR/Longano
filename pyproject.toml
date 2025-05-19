@@ -1,0 +1,37 @@
+[project]
+name = "longano"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Leandro", email = "you@example.com" }
+]
+dependencies = [
+  "flet",
+  "lxml",
+  "certifi",
+  "firebase-admin",
+  "requests",
+  "holidays",
+  "Pillow"
+]
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+org = "com.mycompany"
+assets = ["assets", "cadastrolongano-firebase-adminsdk-fbsvc-1e1af318e1.json"]
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "longano"
+
+# company name to display in about app dialogs
+company = "Flet"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2025 by Flet"
+
+[tool.flet.app]
+path = ""
