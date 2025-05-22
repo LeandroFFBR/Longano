@@ -56,26 +56,12 @@ def CadastroCliente(page: ft.Page, plano_escolhido):
         page.overlay.append(loading_indicator)
         loading_indicator.open = True
         page.update()
-        loading_indicator.title = ft.Text("importando contrato1")
-        page.update()
         from contrato1 import substituir_xml
-        loading_indicator.title = ft.Text("importando avisaapi")
-        page.update
         from avisaapi import zap_boas_vindas, zap_pay, zap_contrato, zap_bem_vindo_pdf
-        loading_indicator.title = ft.Text("importando clicksign")
-        page.update()
         from clicksign import upload_contrato, criar_signatario, adicionar_signatario_ao_contrato
-        loading_indicator.title = ft.Text("importando api_asaas")
-        page.update()
         from api_asaas import cadastrar_cliente, gerar_cobranca, data_atual, hora_atual, nf, pix, plano_abrev, plano_valor, data_YMD
-        loading_indicator.title = ft.Text("importando firebase")
-        page.update()
         from firebase import iniciar_firebase
-        loading_indicator.title = ft.Text("importações concluidas")
-        page.update()
         db = iniciar_firebase()
-        loading_indicator.title = ft.Text("iniciando firebase")
-        page.update()
         data_YMDAY = data_YMD()
         data = data_atual()
         hora = hora_atual()
