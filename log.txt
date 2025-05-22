@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "D:\Users\Alex\Documents\LONGANO1\cadastro_cliente.py", line 111, in salvar_dados
-    zap_contrato(cel_zap, url_contrato["url"])
-                          ~~~~~~~~~~~~^^^^^^^
-TypeError: 'bool' object is not subscriptable
