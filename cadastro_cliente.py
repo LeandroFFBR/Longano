@@ -79,19 +79,27 @@ def CadastroCliente(page: ft.Page, plano_escolhido):
         data_YMDAY = data_YMD()
         data = data_atual()
         hora = hora_atual()
-
+        loading_indicator.title = ft.Text("substituindo documento")
+        page.update()
         substituir_xml(caminho_original, caminho_novo, nome_input.value, cpf_input.value, endereco_input.value, cep_input.value, telefone_input.value, plano_escolhido, plano_valor[plano_escolhido], data, "25")
         
         plano = plano_abrev[plano_escolhido]
-
+        loading_indicator.title = ft.Text("iniciando cliente")
+        page.update()
         cliente_id = cadastrar_cliente(nome_input.value,email_input.value, cpf_input.value.replace(".", "").replace("-",""), telefone_input.value.replace("(", "").replace(")","").replace("-", ""), endereco_input.value, cep_input.value, numero.value, complemento.value, plano_escolhido)
         if cliente_id:
+            loading_indicator.title = ft.Text("iniciando cobrança")
+            page.update()
             cobranca = gerar_cobranca(cliente_id, 9.90, pagamento_dropdown.value)
             if cobranca:
                 pix_json= pix(cobranca["id"])
                 url_pay = cobranca["invoiceUrl"]
                 nf(cliente_id, 9.90, data_YMDAY)
+                loading_indicator.title = ft.Text("iniciando contrato")
+                page.update()
                 contrato_id = upload_contrato("assets/document/Contrato_de_Adesão_Assistência_Funeral_Modificado_XML.docx")
+                loading_indicator.title = ft.Text("iniciando signatario")
+                page.update()
                 signatario_id = criar_signatario(nome_input.value, email_input.value, cpf_input.value.replace(".", "").replace("-",""), telefone_input.value.replace("(", "").replace(")", "").replace("-", ""))
                 url_contrato = adicionar_signatario_ao_contrato(contrato_id,signatario_id)
                 cel_zap = telefone_input.value.replace("(", "").replace(")", "").replace("-", "")
