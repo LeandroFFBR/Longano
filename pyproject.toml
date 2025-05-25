@@ -8,13 +8,12 @@ authors = [
     { name = "Leandro", email = "you@example.com" }
 ]
 dependencies = [
-  "flet",
+  "flet==0.27.6",
   "lxml",
   "certifi",
   "firebase-admin",
   "requests",
-  "holidays",
-  "Pillow"
+  "holidays"
 ]
 
 [tool.flet]
