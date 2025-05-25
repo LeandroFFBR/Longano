@@ -122,19 +122,3 @@ def enviar_contrato_para_assinatura(email):
     else:
         print("Erro ao enviar contrato:", response.text)
         return False
-
-caminho_pdf = "assets/document/Contrato_de_Adesão_Assistência_Funeral1.docx"
-# Passo 1: Enviar o contrato e pegar a chave do documento
-documento_key = upload_contrato(caminho_pdf)
-
-if documento_key:
-    # Passo 2: Criar o signatário
-    signatario_key = criar_signatario("teste teste", "leandrofelixf@outlook.com", "45444248875", "11968920238")
-
-    if signatario_key:
-        # Passo 3: Vincular signatário ao contrato
-        key_sms= adicionar_signatario_ao_contrato(documento_key, signatario_key)
-        if key_sms:
-            email = key_sms["request_signature_key"]
-            url = key_sms["url"]
-            enviar_contrato_para_assinatura(email)
