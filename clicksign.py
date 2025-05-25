@@ -7,7 +7,7 @@ API_KEY = "bdd44f38-1974-45f6-bf77-5cb0218056ec"
 URL_UPLOAD = f"https://app.clicksign.com/api/v1/documents?access_token={API_KEY}"
 
 def upload_contrato(caminho_pdf):
-
+    URL_UPLOAD = f"https://app.clicksign.com/api/v1/documents?access_token=bdd44f38-1974-45f6-bf77-5cb0218056ec"
     with open(caminho_pdf, "rb") as pdf_file:
         pdf_base64 = base64.b64encode(pdf_file.read()).decode("utf-8")
     
