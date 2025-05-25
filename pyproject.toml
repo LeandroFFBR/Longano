@@ -1,5 +1,5 @@
 [project]
-name = "longano"
+name = "Longano"
 version = "0.1.0"
 description = ""
 readme = "README.md"
@@ -9,11 +9,11 @@ authors = [
 ]
 dependencies = [
   "flet==0.27.6",
-  "lxml",
-  "certifi",
-  "firebase-admin",
-  "requests",
-  "holidays"
+  "lxml==5.4.0",
+  "certifi==2025.1.31",
+  "firebase-admin==6.7.0",
+  "requests==2.32.3",
+  "holidays==0.71"
 ]
 
 [tool.flet]
