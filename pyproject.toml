@@ -19,7 +19,7 @@ dependencies = [
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
 # Combined with project.name to build bundle ID for iOS and Android apps
-assets = ["assets", "cadastrolongano-firebase-adminsdk-fbsvc-1e1af318e1.json"]
+assets = ["assets", "cadastrolongano-firebase-adminsdk-fbsvc-1e1af318e1.json", "assets/document"]
 
 # copyright text to display in about app dialogs
 copyright = "Copyright (C) 2025 by Flet"
