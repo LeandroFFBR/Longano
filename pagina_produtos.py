@@ -28,8 +28,11 @@ def PaginaProdutos(page: ft.Page):
 
     def voltar_login(e):
         """Função para voltar à tela de login."""
+        page.clean()
+        page.overlay.clear()
         from tela_login import TelaLogin
         TelaLogin(page)
+        page.update()
 
     # Diálogo para mostrar informações
     dialog = ft.AlertDialog()
@@ -63,8 +66,8 @@ def PaginaProdutos(page: ft.Page):
                             height=100,
                             style=ft.ButtonStyle(
                                 shape=ft.RoundedRectangleBorder(radius=15),
-                                overlay_color=ft.colors.TRANSPARENT,  # Remove efeito de clique padrão
-                                bgcolor=ft.colors.TRANSPARENT
+                                overlay_color="transparent",  # Remove efeito de clique padrão
+                                bgcolor="transparent"
                             )
                         ),
                         width=280,
@@ -96,8 +99,8 @@ def PaginaProdutos(page: ft.Page):
                             height=100,
                             style=ft.ButtonStyle(
                                 shape=ft.RoundedRectangleBorder(radius=15),
-                                overlay_color=ft.colors.TRANSPARENT,
-                                bgcolor=ft.colors.TRANSPARENT
+                                overlay_color="transparent",
+                                bgcolor="transparent"
                             )
                         ),
                         width=280,
@@ -136,8 +139,8 @@ def PaginaProdutos(page: ft.Page):
                             height=100,
                             style=ft.ButtonStyle(
                                 shape=ft.RoundedRectangleBorder(radius=15),
-                                overlay_color=ft.colors.TRANSPARENT,
-                                bgcolor=ft.colors.TRANSPARENT
+                                overlay_color="transparent",
+                                bgcolor="transparent"
                             )
                         ),
                         width=280,
@@ -172,8 +175,8 @@ def PaginaProdutos(page: ft.Page):
                             height=100,
                             style=ft.ButtonStyle(
                                 shape=ft.RoundedRectangleBorder(radius=15),
-                                overlay_color=ft.colors.TRANSPARENT,
-                                bgcolor=ft.colors.TRANSPARENT
+                                overlay_color="transparent",
+                                bgcolor="transparent"
                             )
                         ),
                         width=280,
@@ -209,3 +212,4 @@ def PaginaProdutos(page: ft.Page):
 
     # Adiciona o diálogo à página
     page.overlay.append(dialog)
+    page.update()

@@ -8,7 +8,7 @@ USUARIOS_VALIDOS = {
 
 def TelaLogin(page: ft.Page):
     page.window.always_on_top= True
-    page.bgcolor = ft.colors.TRANSPARENT
+    page.bgcolor = "transparent"
     page.decoration = ft.BoxDecoration(
         image= ft.DecorationImage(
             src= "assets/image/capa_login.png",
@@ -29,19 +29,19 @@ def TelaLogin(page: ft.Page):
 
     def alternar_visibilidade_senha(e):
         senha_input.password = not senha_input.password
-        icone_olho.icon = ft.icons.VISIBILITY if not senha_input.password else ft.icons.VISIBILITY_OFF
+        icone_olho.icon = "visibility" if not senha_input.password else "visibility_off"
         page.update()
 
     # Limpa a página para renderizar a tela de login
     page.clean()
 
     # Campos de entrada
-    usuario_input = ft.TextField(label="Usuário", width=300, bgcolor=ft.colors.WHITE)
-    senha_input = ft.TextField(label="Senha", password=True, width=300, color=ft.colors.WHITE, bgcolor=ft.colors.BLUE_900)
+    usuario_input = ft.TextField(label="Usuário", width=300, bgcolor="white")
+    senha_input = ft.TextField(label="Senha", password=True, width=300, color="white", bgcolor="blue900")
 
     # Ícone para mostrar/ocultar senha
     icone_olho = ft.IconButton(
-        icon=ft.icons.VISIBILITY_OFF,  # Ícone inicial (senha oculta)
+        icon="visibility_off",  # Ícone inicial (senha oculta)
         on_click=alternar_visibilidade_senha
     )
 
@@ -72,3 +72,4 @@ def TelaLogin(page: ft.Page):
             spacing=20,
         )
     )
+    page.update()

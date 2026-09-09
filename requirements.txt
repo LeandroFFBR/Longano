@@ -1,4 +1,4 @@
-flet==0.28.0.dev4456
+flet
 certifi
 firebase-admin==6.7.0
 requests

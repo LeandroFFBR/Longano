@@ -1,0 +1,67 @@
+# =========================================
+# Projeto Longano - .gitignore focado em segurança
+# =========================================
+
+# Ambientes virtuais e artefatos locais
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Flet / runtime local
+.flet/
+
+# Arquivos de ambiente e segredos
+.env
+.env.*
+*.env
+*.env.*
+*.secret
+*.secrets
+*.token
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+*.p8
+
+# Credenciais, senhas e strings de conexão
+*password*
+*passwd*
+*credential*
+*credentials*
+*secret*
+*connection*string*
+*conn*string*
+appsettings*.json
+secrets*.json
+*.local.json
+firebase-adminsdk-*.json
+cadastrolongano-firebase-adminsdk-*.json
+
+# Logs e arquivos temporários
+*.log
+*.log.*
+logs/
+log/
+
+# Bancos locais e arquivos de dados sensíveis
+*.db
+*.sqlite
+*.sqlite3
+storage/**/*.db
+storage/**/*.sqlite
+storage/**/*.sqlite3
+
+# Arquivos de sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
