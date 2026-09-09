@@ -61,7 +61,7 @@ def hora_atual():
 
 
 # Sua API Key do Asaas
-API_KEY = "$aact_MzkwODA2MWY2OGM3MWRlMDU2NWM3MzJlNzZmNGZhZGY6OjFmOTIxYzFmLTU1MjktNGM5Mi04NGNiLTZjNTg4NTc4NWMyNDo6JGFhY2hfMDczMDcxYTktOWIwMy00ZThhLWFlZjctM2QzZGVkNmUwMmFj"
+API_KEY = "SUA_API_KEY_ASAAS"
 BASE_URL = "https://api.asaas.com/v3"  # Ambiente real
 
 HEADERS = {

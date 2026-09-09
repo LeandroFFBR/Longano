@@ -1,6 +1,6 @@
 import requests
 
-ASAAS_API_KEY = "fa65aa5b-4bd8-4289-8579-0e8cf3f0f108"
+ASAAS_API_KEY = "SUA_API_KEY_ASAAS"
 ASAAS_BASE_URL = "https://sandbox.asaas.com/api/v3"
 
 def criar_cliente(nome, email, telefone, cpf):

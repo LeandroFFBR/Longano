@@ -2,7 +2,7 @@ import requests
 import base64
 
 # API Key do Avisa API
-API_KEY = "6eClrx9YDU1satfniSDlJq9Wc0ltuoNt3Aqfn0Kx2WQHjmblrBir8IABtbPp"
+API_KEY = "SUA_API_KEY_AVISAAPI"
 
 # Base URL da API do Avisa App
 BASE_URL = "https://www.avisaapi.com.br/api"
