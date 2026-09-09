@@ -79,20 +79,6 @@ Antes de executar o projeto, verifique se você possui:
 - credenciais válidas do Firebase;
 - ambiente local configurado para executar aplicações Flet.
 
-## Instalação
-
-### Opção 1: via `pip`
-
-```bash
-pip install -r requirements.txt
-```
-
-### Opção 2: via `poetry`
-
-```bash
-poetry install
-```
-
 ## Execução
 
 ### Executar a aplicação desktop
@@ -113,26 +99,6 @@ flet run
 flet run --web
 ```
 
-## Configuração de credenciais
-
-As credenciais e tokens das plataformas integradas devem ser mantidos fora do controle de versão por segurança.
-
-Recomendado:
-
-- armazenar em variáveis de ambiente;
-- usar arquivos `.env` locais;
-- manter arquivos sensíveis fora do Git.
-
-## Observações importantes
-
-- O projeto contém integrações com serviços externos reais e, por isso, exige configuração correta das chaves e credenciais.
-- O arquivo JSON de configuração do Firebase deve ser protegido e não deve ser enviado ao repositório público.
-- O código foi estruturado para servir como base de desenvolvimento de um sistema de agência de seguros, podendo evoluir para autenticação real, painel administrativo, relatórios e integrações adicionais.
-
 ## Licença
 
 Este projeto está sendo desenvolvido para fins educacionais e de negócio interno da base do sistema. Caso seja reutilizado em outros contextos, ajuste a licença conforme a necessidade do projeto.
-
-## Conclusão
-
-O Longano representa uma base funcional para um sistema de agência de seguros de vida, combinando Python, Flet e integrações com serviços essenciais do mercado para oferecer uma experiência completa de cadastro, envio de contratos, cobrança e comunicação com clientes.
