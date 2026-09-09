@@ -1,4 +1,4 @@
-# Longano
+# Longano (Sistema real para fins educaionais)
 
 Sistema base para uma agência de seguros de vida, desenvolvido em Python com o framework Flet para interface desktop/web. O projeto foi pensado para facilitar o cadastro de clientes, apresentação de planos, geração e envio de contratos, além da integração com plataformas de pagamentos, comunicação e armazenamento de dados.
 
@@ -57,17 +57,6 @@ A proposta da aplicação é centralizar essas etapas em uma interface simples e
 - `contrato1.py` — manipulação e personalização do contrato;
 - `assets/` — imagens, documentos e arquivos estáticos do app;
 - `storage/` — armazenamento local e dados auxiliares.
-
-## Fluxo principal da aplicação
-
-1. O usuário acessa a tela de login.
-2. A partir da tela inicial, o sistema apresenta os planos disponíveis.
-3. Ao selecionar um plano, o usuário preenche os dados do cliente.
-4. O sistema gera ou atualiza o contrato e envia o documento para assinatura digital.
-5. O cliente é cadastrado na plataforma de pagamentos.
-6. Uma cobrança é criada e o pagamento pode ser realizado via PIX ou outros meios.
-7. O sistema envia notificações via WhatsApp.
-8. As informações do cadastro são salvas no Firebase.
 
 ## Pré-requisitos
 
