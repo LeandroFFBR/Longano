@@ -1,5 +1,5 @@
 # Longano (Sistema real para fins educaionais)
-
+![prototipo](prototipo.png)
 Sistema base para uma agência de seguros de vida, desenvolvido em Python com o framework Flet para interface desktop/web. O projeto foi pensado para facilitar o cadastro de clientes, apresentação de planos, geração e envio de contratos, além da integração com plataformas de pagamentos, comunicação e armazenamento de dados.
 
 ## Sobre o projeto
@@ -73,13 +73,7 @@ Antes de executar o projeto, verifique se você possui:
 ### Executar a aplicação desktop
 
 ```bash
-python main.py
-```
-
-Ou, se preferir a execução com Flet diretamente:
-
-```bash
-flet run
+flet run main.py
 ```
 
 ### Executar em modo web
